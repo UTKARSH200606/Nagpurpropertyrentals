@@ -50,6 +50,8 @@
         .btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px);box-shadow:0 4px 12px rgba(27,122,90,0.3)}
         .btn-whatsapp{background:#25D366;color:#fff}
         .btn-whatsapp:hover{background:#1eb954;transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,211,102,0.3)}
+        .btn-inquiry{background:var(--accent);color:#fff;padding:12px 28px;font-size:15px;border-radius:var(--radius)}
+        .btn-inquiry:hover{background:var(--accent-hover);transform:translateY(-1px);box-shadow:0 4px 12px rgba(27,122,90,0.3)}
         .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
         .mobile-toggle{display:none;width:40px;height:40px;align-items:center;justify-content:center;cursor:pointer;border-radius:var(--radius);transition:background var(--transition)}
         .mobile-toggle:hover{background:var(--bg-tertiary)}
@@ -71,6 +73,8 @@
         .section-label{display:inline-block;font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px}
         .section-header h2{font-size:30px;font-weight:700;letter-spacing:-0.025em;color:var(--text-primary);margin-bottom:12px}
         .section-header p{font-size:15px;color:var(--text-secondary);max-width:520px;margin:0 auto;line-height:1.7}
+
+        .section-inquiry{text-align:center;margin-top:44px}
 
         .properties{padding:72px 0;background:var(--bg-secondary)}
         .properties-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
@@ -100,31 +104,14 @@
         .service-card-body h3{font-size:15px;font-weight:600;color:var(--text-primary);letter-spacing:-0.01em;line-height:1.3}
 
         .contact{padding:72px 0;background:var(--bg-secondary)}
-        .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-        .contact-info h3{font-size:22px;font-weight:600;color:var(--text-primary);margin-bottom:16px;letter-spacing:-0.01em}
-        .contact-info>p{font-size:15px;color:var(--text-secondary);line-height:1.7;margin-bottom:32px}
-        .contact-details{display:flex;flex-direction:column;gap:18px}
-        .contact-item{display:flex;align-items:flex-start;gap:14px}
-        .contact-item-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--accent-light);color:var(--accent);border-radius:var(--radius);flex-shrink:0}
-        .contact-item-label{font-size:12px;font-weight:600;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:2px}
-        .contact-item-value{font-size:15px;font-weight:500;color:var(--text-primary)}
-        .contact-item-value a:hover{color:var(--accent)}
-
-        .contact-form-wrapper{background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow-sm)}
-        .contact-form-wrapper h3{font-size:18px;font-weight:600;color:var(--text-primary);margin-bottom:20px}
-        .form-group{margin-bottom:18px}
-        .form-label{display:block;font-size:13px;font-weight:500;color:var(--text-secondary);margin-bottom:6px}
-        .form-input,.form-select,.form-textarea{width:100%;padding:10px 14px;font-size:14px;color:var(--text-primary);background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius);transition:border-color var(--transition),box-shadow var(--transition)}
-        .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(27,122,90,0.1)}
-        .form-input::placeholder,.form-textarea::placeholder{color:var(--text-tertiary)}
-        .form-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23718096' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;cursor:pointer}
-        .form-textarea{resize:vertical;min-height:90px}
-        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-        .btn-submit{width:100%;padding:12px 24px;justify-content:center;font-size:15px}
-        .form-success{display:none;text-align:center;padding:28px 16px}
-        .form-success-icon{width:56px;height:56px;display:inline-flex;align-items:center;justify-content:center;background:var(--accent-light);color:var(--accent);border-radius:50%;margin-bottom:14px}
-        .form-success h4{font-size:18px;font-weight:600;color:var(--text-primary);margin-bottom:8px}
-        .form-success p{font-size:14px;color:var(--text-secondary)}
+        .contact-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:900px;margin:0 auto}
+        .contact-card{background:var(--bg-primary);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 20px;text-align:center;transition:all var(--transition)}
+        .contact-card:hover{box-shadow:var(--shadow-md);border-color:transparent;transform:translateY(-2px)}
+        .contact-card-icon{width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;background:var(--accent-light);color:var(--accent);border-radius:var(--radius);margin-bottom:14px}
+        .contact-card-label{font-size:11px;font-weight:600;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px}
+        .contact-card-value{font-size:15px;font-weight:600;color:var(--text-primary);word-break:break-all}
+        .contact-card-value a{transition:color var(--transition)}
+        .contact-card-value a:hover{color:var(--accent)}
 
         .site-footer{padding:40px 0;background:var(--text-primary);color:rgba(255,255,255,0.7)}
         .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
@@ -170,8 +157,7 @@
             .property-section-images a{height:160px}
             .service-cards{grid-template-columns:repeat(2,1fr);gap:14px}
             .service-card-images a{height:120px}
-            .contact-grid{grid-template-columns:1fr;gap:36px}
-            .form-row{grid-template-columns:1fr;gap:18px}
+            .contact-cards{grid-template-columns:repeat(2,1fr)}
             .footer-inner{flex-direction:column;text-align:center}
         }
         @media(max-width:480px){
@@ -180,7 +166,7 @@
             .service-cards{grid-template-columns:1fr;max-width:400px;margin:0 auto}
             .service-card-images a{height:160px}
             .property-section-body{padding:18px 20px}
-            .contact-form-wrapper{padding:22px}
+            .contact-cards{grid-template-columns:1fr;max-width:320px}
         }
     </style>
 
@@ -240,6 +226,7 @@
     </div>
 
     <main>
+        <!-- HERO -->
         <section class="hero" id="home" aria-labelledby="hero-heading">
             <div class="container hero-inner">
                 <div class="hero-content">
@@ -248,7 +235,7 @@
                     <p>Properties, painting, plumbing, electric work, modular kitchen, tiles, ceiling, and steel &amp; iron work — all under one roof by Mr. Akhilesh.</p>
                     <div class="hero-buttons">
                         <a href="#properties" class="btn btn-primary">View Properties <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
-                        <a href="#services" class="btn btn-secondary" style="background:var(--bg-tertiary);color:var(--text-primary);border:1px solid var(--border);">Our Services</a>
+                        <a href="#services" class="btn" style="background:var(--bg-tertiary);color:var(--text-primary);border:1px solid var(--border);">Our Services</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -259,8 +246,14 @@
                     </div>
                 </div>
             </div>
+            <div class="section-inquiry">
+                <a href="https://wa.me/918928148795?text=Hi%20Mr.%20Akhilesh%2C%20I%20am%20interested%20in%20your%20services.%20Please%20share%20details." class="btn btn-inquiry" target="_blank" rel="noopener noreferrer">
+                    <i data-lucide="message-circle" style="width:16px;height:16px;"></i> Enquire Now on WhatsApp
+                </a>
+            </div>
         </section>
 
+        <!-- PROPERTIES -->
         <section class="properties" id="properties" aria-labelledby="properties-heading">
             <div class="container">
                 <div class="section-header">
@@ -271,12 +264,8 @@
                 <div class="properties-grid">
                     <article class="property-section">
                         <div class="property-section-images">
-                            <a href="https://wa.me/918928148795?text=Hi%20Mr.%20Akhilesh%2C%20I%20am%20looking%20for%20a%20residential%20property%20for%20rent." target="_blank" rel="noopener noreferrer">
-                                <img src="https://picsum.photos/seed/residential-flat-nagpur/420/400.jpg" alt="Residential flat for rent in Nagpur with spacious rooms" width="210" height="200" loading="lazy">
-                            </a>
-                            <a href="https://wa.me/918928148795?text=Hi%20Mr.%20Akhilesh%2C%20I%20am%20looking%20for%20a%20residential%20property%20for%20rent." target="_blank" rel="noopener noreferrer">
-                                <img src="https://picsum.photos/seed/residential-house-nagpur/420/400.jpg" alt="Independent residential house for rent in Nagpur locality" width="210" height="200" loading="lazy">
-                            </a>
+                            <a href="https://wa.me/918928148795?text=Hi%20Mr.%20Akhilesh%2C%20I%20am%20looking%20for%20a%20residential%20property%20for%20rent." target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/seed/residential-flat-nagpur/420/400.jpg" alt="Residential flat for rent in Nagpur with spacious rooms" width="210" height="200" loading="lazy"></a>
+                            <a href="https://wa.me/918928148795?text=Hi%20Mr.%20Akhilesh%2C%20I%20am%20looking%20for%20a%20residential%20property%20for%20rent." target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/seed/residential-house-nagpur/420/400.jpg" alt="Independent residential house for rent in Nagpur locality" width="210" height="200" loading="lazy"></a>
                         </div>
                         <div class="property-section-body">
                             <h3>Residential Properties</h3>
@@ -285,12 +274,8 @@
                     </article>
                     <article class="property-section">
                         <div class="property-section-images">
-                            <a href="https://wa.me/918928148795?text=Hi%20Mr.%20Akhilesh%2C%20I%20am%20looking%20for%20a%20commercial%20property%20for%20rent." target="_blank" rel="noopener noreferrer">
-                                <img src="https://picsum.photos/seed/commercial-shop-nagpur/420/400.jpg" alt="Commercial shop for rent in Nagpur market area" width="210" height="200" loading="lazy">
-                            </a>
-                            <a href="https://wa.me/918928148795?text=Hi%20Mr.%20Akhilesh%2C%20I%20am%20looking%20for%20a%20commercial%20property%20for%20rent." target="_blank" rel="noopener noreferrer">
-                                <img src="https://picsum.photos/seed/commercial-office-nagpur/420/400.jpg" alt="Commercial office space for rent in Nagpur business area" width="210" height="200" loading="lazy">
-                            </a>
+                            <a href="https://wa.me/918928148795?text=Hi%20Mr.%20Akhilesh%2C%20I%20am%20looking%20for%20a%20commercial%20property%20for%20rent." target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/seed/commercial-shop-nagpur/420/400.jpg" alt="Commercial shop for rent in Nagpur market area" width="210" height="200" loading="lazy"></a>
+                            <a href="https://wa.me/918928148795?text=Hi%20Mr.%20Akhilesh%2C%20I%20am%20looking%20for%20a%20commercial%20property%20for%20rent." target="_blank" rel="noopener noreferrer"><img src="https://picsum.photos/seed/commercial-office-nagpur/420/400.jpg" alt="Commercial office space for rent in Nagpur business area" width="210" height="200" loading="lazy"></a>
                         </div>
                         <div class="property-section-body">
                             <h3>Commercial Properties</h3>
@@ -298,9 +283,15 @@
                         </div>
                     </article>
                 </div>
+                <div class="section-inquiry">
+                    <a href="https://wa.me/918928148795?text=Hi%20Mr.%20Akhilesh%2C%20I%20am%20looking%20for%20a%20property%20for%20rent%20in%20Nagpur.%20Please%20share%20available%20options." class="btn btn-inquiry" target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="message-circle" style="width:16px;height:16px;"></i> Enquire About Properties
+                    </a>
+                </div>
             </div>
         </section>
 
+        <!-- SERVICES -->
         <section class="services-grid" id="services" aria-labelledby="services-heading">
             <div class="container">
                 <div class="section-header">
@@ -375,72 +366,42 @@
                     </article>
 
                 </div>
+                <div class="section-inquiry">
+                    <a href="https://wa.me/918928148795?text=Hi%20Mr.%20Akhilesh%2C%20I%20need%20a%20service.%20Please%20let%20me%20know%20the%20details%20and%20pricing." class="btn btn-inquiry" target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="message-circle" style="width:16px;height:16px;"></i> Enquire About Services
+                    </a>
+                </div>
             </div>
         </section>
 
+        <!-- CONTACT -->
         <section class="contact" id="contact" aria-labelledby="contact-heading">
             <div class="container">
                 <div class="section-header">
                     <span class="section-label">Contact Us</span>
                     <h2 id="contact-heading">Get in Touch with Mr. Akhilesh</h2>
-                    <p>Have a requirement? Reach out — we respond within hours.</p>
+                    <p>Reach out directly — we respond within hours.</p>
                 </div>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Let's Work Together</h3>
-                        <p>Whether you need a rental property, painting, plumbing, electric work, modular kitchen, or any other renovation — Mr. Akhilesh provides personalized assistance every step of the way.</p>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <div class="contact-item-icon" aria-hidden="true"><i data-lucide="phone" style="width:18px;height:18px;"></i></div>
-                                <div><div class="contact-item-label">Phone</div><div class="contact-item-value"><a href="tel:+918928148795">+91 8928148795</a></div></div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-item-icon" aria-hidden="true"><i data-lucide="message-circle" style="width:18px;height:18px;"></i></div>
-                                <div><div class="contact-item-label">WhatsApp</div><div class="contact-item-value"><a href="https://wa.me/918928148795" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div></div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-item-icon" aria-hidden="true"><i data-lucide="mail" style="width:18px;height:18px;"></i></div>
-                                <div><div class="contact-item-label">Email</div><div class="contact-item-value"><a href="mailto:Kingsbadsha88@gmail.com">Kingsbadsha88@gmail.com</a></div></div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-item-icon" aria-hidden="true"><i data-lucide="map-pin" style="width:18px;height:18px;"></i></div>
-                                <div><div class="contact-item-label">Office Location</div><div class="contact-item-value">Dharampeth, Nagpur – 440010,<br>Maharashtra, India</div></div>
-                            </div>
-                        </div>
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i data-lucide="phone" style="width:22px;height:22px;"></i></div>
+                        <div class="contact-card-label">Phone</div>
+                        <div class="contact-card-value"><a href="tel:+918928148795">+91 8928148795</a></div>
                     </div>
-                    <div class="contact-form-wrapper">
-                        <div id="contactForm">
-                            <h3>Send Your Requirement</h3>
-                            <form id="leadForm" novalidate>
-                                <div class="form-row">
-                                    <div class="form-group"><label for="formName" class="form-label">Full Name *</label><input type="text" id="formName" name="name" class="form-input" placeholder="e.g. Rajesh Kumar" required autocomplete="name"></div>
-                                    <div class="form-group"><label for="formPhone" class="form-label">Phone Number *</label><input type="tel" id="formPhone" name="phone" class="form-input" placeholder="e.g. 8928148795" required autocomplete="tel"></div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="formType" class="form-label">Service Required *</label>
-                                    <select id="formType" name="property_type" class="form-select" required>
-                                        <option value="" disabled selected>Select service type</option>
-                                        <option value="residential">Residential Property</option>
-                                        <option value="commercial">Commercial Property</option>
-                                        <option value="painting">Painting Work</option>
-                                        <option value="steel-iron">Steel &amp; Iron Work</option>
-                                        <option value="plumbing">Plumbing Work</option>
-                                        <option value="house-rent">Houses for Rent (Owners)</option>
-                                        <option value="ceiling">Ceiling Work</option>
-                                        <option value="electric">Electric Work</option>
-                                        <option value="modular-kitchen">Modular Kitchen</option>
-                                        <option value="tiles-granite">Tiles &amp; Granite Work</option>
-                                    </select>
-                                </div>
-                                <div class="form-group"><label for="formMessage" class="form-label">Your Requirements</label><textarea id="formMessage" name="message" class="form-textarea" placeholder="Describe what you need..." rows="4"></textarea></div>
-                                <button type="submit" class="btn btn-primary btn-submit">Submit Enquiry <i data-lucide="send" style="width:15px;height:15px;"></i></button>
-                            </form>
-                        </div>
-                        <div id="formSuccess" class="form-success">
-                            <div class="form-success-icon"><i data-lucide="check" style="width:28px;height:28px;"></i></div>
-                            <h4>Enquiry Submitted!</h4>
-                            <p>Mr. Akhilesh will contact you shortly on your provided number.</p>
-                        </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i data-lucide="message-circle" style="width:22px;height:22px;"></i></div>
+                        <div class="contact-card-label">WhatsApp</div>
+                        <div class="contact-card-value"><a href="https://wa.me/918928148795" target="_blank" rel="noopener noreferrer">Chat Now</a></div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i data-lucide="mail" style="width:22px;height:22px;"></i></div>
+                        <div class="contact-card-label">Email</div>
+                        <div class="contact-card-value"><a href="mailto:Kingsbadsha88@gmail.com">Kingsbadsha88@gmail.com</a></div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i data-lucide="map-pin" style="width:22px;height:22px;"></i></div>
+                        <div class="contact-card-label">Location</div>
+                        <div class="contact-card-value">Dharampeth, Nagpur – 440010</div>
                     </div>
                 </div>
             </div>
@@ -469,26 +430,12 @@
         function openMenu(){document.getElementById('mobileMenu').classList.add('active');document.body.style.overflow='hidden';lucide.createIcons()}
         function closeMenu(){document.getElementById('mobileMenu').classList.remove('active');document.body.style.overflow=''}
         document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu()});
-
-        document.getElementById('leadForm').addEventListener('submit',function(e){
-            e.preventDefault();
-            var n=document.getElementById('formName').value.trim(),p=document.getElementById('formPhone').value.trim(),t=document.getElementById('formType').value;
-            if(!n||!p||!t)return;
-            document.getElementById('contactForm').style.display='none';
-            document.getElementById('formSuccess').style.display='block';
-            lucide.createIcons();
-            var m=document.getElementById('formMessage').value.trim();
-            var txt="Hi Mr. Akhilesh, I'm "+n+".\nPhone: "+p+"\nService: "+t+"\n"+(m?"Requirement: "+m:"");
-            setTimeout(function(){window.open("https://wa.me/918928148795?text="+encodeURIComponent(txt),'_blank')},800);
-        });
-
         document.querySelectorAll('a[href^="#"]').forEach(function(a){
             a.addEventListener('click',function(e){
                 var id=this.getAttribute('href');if(id==='#')return;
                 var el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'})}
             });
         });
-
         var hdr=document.querySelector('.site-header');
         window.addEventListener('scroll',function(){hdr.style.boxShadow=window.scrollY>10?'0 1px 8px rgba(26,35,50,0.08)':'none'},{passive:true});
     </script>
